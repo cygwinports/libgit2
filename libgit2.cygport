@@ -1,7 +1,7 @@
 inherit cmake
 
 NAME="libgit2"
-VERSION=0.21.0
+VERSION=0.21.3
 RELEASE=1
 CATEGORY="Libs"
 SUMMARY="Git C library"
