@@ -1,7 +1,7 @@
 inherit cmake
 
 NAME="libgit2"
-VERSION=0.22.2
+VERSION=0.23.4
 RELEASE=1
 CATEGORY="Libs"
 SUMMARY="Git C library"
@@ -20,8 +20,8 @@ src_test() {
 	ctest -V
 }
 
-PKG_NAMES="libgit2_22 libgit2-devel"
-libgit2_22_CONTENTS="usr/bin/cyggit2-22.dll usr/share/doc/"
+PKG_NAMES="libgit2_23 libgit2-devel"
+libgit2_23_CONTENTS="usr/bin/cyggit2-23.dll usr/share/doc/"
 libgit2_devel_CONTENTS="usr/include/git2* usr/lib/libgit2.dll.a usr/lib/pkgconfig/libgit2.pc"
 
 DIFF_EXCLUDES=".clarcache clar.suite"
