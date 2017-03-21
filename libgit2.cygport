@@ -1,8 +1,8 @@
 inherit cmake
 
 NAME="libgit2"
-VERSION=0.23.4
-RELEASE=2
+VERSION=0.24.6
+RELEASE=1
 CATEGORY="Libs"
 SUMMARY="Git C library"
 DESCRIPTION="libgit2 is a portable, pure C implementation of the Git core
@@ -12,7 +12,6 @@ supports C bindings."
 HOMEPAGE="http://libgit2.github.com/"
 SRC_URI="https://github.com/libgit2/libgit2/archive/v${VERSION}/libgit2-v${VERSION}.tar.gz"
 SRC_DIR="libgit2-${VERSION}"
-PATCH_URI="http://pkgs.fedoraproject.org/cgit/rpms/libgit2.git/plain/0001-commit-always-initialize-commit-message.patch?h=f23"
 
 CYGCMAKE_ARGS="-DTHREADSAFE=ON"
 
@@ -21,8 +20,8 @@ src_test() {
 	ctest -V
 }
 
-PKG_NAMES="libgit2_23 libgit2-devel"
-libgit2_23_CONTENTS="usr/bin/cyggit2-23.dll usr/share/doc/"
+PKG_NAMES="libgit2_24 libgit2-devel"
+libgit2_24_CONTENTS="usr/bin/cyggit2-24.dll usr/share/doc/"
 libgit2_devel_CONTENTS="usr/include/git2* usr/lib/libgit2.dll.a usr/lib/pkgconfig/libgit2.pc"
 
 DIFF_EXCLUDES=".clarcache clar.suite"
