@@ -1,7 +1,7 @@
 inherit cmake
 
 NAME="libgit2"
-VERSION=0.24.6
+VERSION=0.25.1
 RELEASE=1
 CATEGORY="Libs"
 SUMMARY="Git C library"
@@ -12,6 +12,7 @@ supports C bindings."
 HOMEPAGE="http://libgit2.github.com/"
 SRC_URI="https://github.com/libgit2/libgit2/archive/v${VERSION}/libgit2-v${VERSION}.tar.gz"
 SRC_DIR="libgit2-${VERSION}"
+PATCH_URI="http://pkgs.fedoraproject.org/cgit/rpms/libgit2.git/plain/0001-pkgconfig-do-not-quote-Libs.patch?h=f26"
 
 CYGCMAKE_ARGS="-DTHREADSAFE=ON"
 
@@ -20,8 +21,8 @@ src_test() {
 	ctest -V
 }
 
-PKG_NAMES="libgit2_24 libgit2-devel"
-libgit2_24_CONTENTS="usr/bin/cyggit2-24.dll usr/share/doc/"
+PKG_NAMES="libgit2_25 libgit2-devel"
+libgit2_25_CONTENTS="usr/bin/cyggit2-25.dll usr/share/doc/"
 libgit2_devel_CONTENTS="usr/include/git2* usr/lib/libgit2.dll.a usr/lib/pkgconfig/libgit2.pc"
 
 DIFF_EXCLUDES=".clarcache clar.suite"
